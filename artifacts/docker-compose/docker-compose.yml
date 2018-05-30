@@ -1,0 +1,14 @@
+version: "3.2"
+
+services:
+  threshold:
+    image: threshold/gateway
+    ports:
+      - "8080:8080"
+      - "9136:9136"
+      # Enable this for HTTPS
+      # - "8443:8443"
+    volumes:
+      - type: bind
+        source: ../../examples/simple
+        target: /opt/kamara/apis

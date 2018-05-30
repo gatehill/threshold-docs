@@ -1,0 +1,35 @@
+buildscript {
+    ext {
+        version_kamara_dsl = '0.1.0-SNAPSHOT'
+    }
+}
+
+plugins {
+    id "org.jetbrains.kotlin.jvm" version "1.2.31"
+}
+
+compileKotlin {
+    kotlinOptions.jvmTarget = '1.8'
+    sourceSets {
+        main.kotlin.srcDirs = ['src']
+    }
+}
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+
+    repositories {
+        maven {
+            url 'https://s3-eu-west-1.amazonaws.com/gatehillsoftware-maven/snapshots/'
+        }
+    }
+}
+
+dependencies {
+    compile "com.gatehill.kamara:dsl:$version_kamara_dsl"
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = "4.6"
+}

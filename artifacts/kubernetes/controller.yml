@@ -1,0 +1,41 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: threshold-controller
+  labels:
+    app: threshold-controller
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: threshold-controller
+  template:
+    metadata:
+      labels:
+        app: threshold-controller
+    spec:
+      serviceAccountName: threshold-controller
+      containers:
+      - name: threshold-controller
+        image: threshold/controller
+#        env:
+#          - name: DEPLOYMENT_NAME
+#            value: gateway
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: threshold-controller
+---
+apiVersion: rbac.authorization.k8s.io/v1beta1
+kind: ClusterRoleBinding
+metadata:
+  name: threshold-controller-cluster-edit
+subjects:
+  - kind: ServiceAccount
+    namespace: default
+    name: threshold-controller
+roleRef:
+  kind: ClusterRole
+  name: edit
+  apiGroup: rbac.authorization.k8s.io

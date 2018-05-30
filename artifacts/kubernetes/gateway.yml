@@ -1,0 +1,87 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: kamara-apis
+data:
+  simple.kts: |
+    import kamara.dsl.*
+
+    apis {
+      api("example") {
+        version = "1.0"
+        backend = "http://example.com"
+
+        policies {
+          cache duration 60.seconds
+        }
+      }
+    }
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: threshold-gateway
+  labels:
+    app: threshold-gateway
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: threshold-gateway
+  template:
+    metadata:
+      labels:
+        app: threshold-gateway
+    spec:
+      containers:
+      - name: threshold-gateway
+        image: threshold/gateway
+        ports:
+        - containerPort: 8080
+        - containerPort: 9136
+        # Enable this for HTTPS
+        # - containerPort: 8443
+        volumeMounts:
+        - name: api-volume
+          mountPath: /opt/kamara/apis
+
+        # Only serve traffic when ready
+        readinessProbe:
+          httpGet:
+            path: /system/status
+            port: 8080
+          initialDelaySeconds: 5
+          timeoutSeconds: 1
+          periodSeconds: 10
+
+        # Triggers restart on failure
+        livenessProbe:
+          httpGet:
+            path: /system/status
+            port: 8080
+          initialDelaySeconds: 5
+          timeoutSeconds: 1
+          periodSeconds: 10
+          failureThreshold: 3
+
+      volumes:
+      - name: api-volume
+        configMap:
+          name: kamara-apis
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: threshold-gateway
+spec:
+  selector:
+    app: threshold-gateway
+  type: LoadBalancer
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 8080
+  # Enable this for HTTPS
+  # - protocol: TCP
+  #   port: 443
+  #   targetPort: 8443

@@ -14,7 +14,7 @@ Creating network "compose_default" with the default driver
 Creating compose_threshold_1 ... done
 Attaching to compose_threshold_1
 threshold_1  | [threshold] Generating registry
-threshold_1  | INFO  Loaded declaration: /opt/threshold/apis/simple.yml
+threshold_1  | INFO  Loaded declaration: /opt/kamara/apis/simple.yml
 threshold_1  | [threshold] Booting gateway
 threshold_1  | 25-Mar-2018 23:32:33.756 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.5.29
 ...

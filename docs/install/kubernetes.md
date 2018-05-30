@@ -31,7 +31,7 @@ threshold-deployment-5d75d65f8b-flwzr   1/1       Running   0          0s
 
 $ kubectl logs -f threshold-deployment-5d75d65f8b-flwzr
 [threshold] Generating registry
-INFO  Loaded declaration: /opt/threshold/apis/simple.yml
+INFO  Loaded declaration: /opt/kamara/apis/simple.yml
 [threshold] Booting gateway
 25-Mar-2018 23:32:33.756 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.5.29
 ...

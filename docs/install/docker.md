@@ -12,14 +12,14 @@ See instructions for:
 
 Start Threshold using:
 
-    docker run -it -p 8080:8080 -v $PWD/examples/src/simple:/opt/threshold/apis gatehill/threshold-gateway
+    docker run -it -p 8080:8080 -v $PWD/examples/src/simple:/opt/kamara/apis threshold/gateway
 
 ## Example
 
 ```
-$ docker run -it -p 8080:8080 -v $PWD/examples/src/simple:/opt/threshold/apis gatehill/threshold-gateway
+$ docker run -it -p 8080:8080 -v $PWD/examples/src/simple:/opt/kamara/apis threshold/gateway
 [threshold] Generating registry
-INFO  Loaded declaration: /opt/threshold/apis/simple.yml
+INFO  Loaded declaration: /opt/kamara/apis/simple.yml
 [threshold] Booting gateway
 25-Mar-2018 23:32:33.756 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.5.29
 ...

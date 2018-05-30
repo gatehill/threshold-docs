@@ -2,7 +2,7 @@
 
 Cloud native API Gateway for Docker and Kubernetes.
 
-* Add caching, rate limiting, authentication, IP restrictions [and much more](policies.md) in front of your APIs
+* Add caching, rate limiting, authentication, IP restrictions [and much more](docs/policies.md) in front of your APIs
 * Runs in Kubernetes, Docker Compose and plain Docker
 * Add policies to your APIs in seconds with the simple DSL, or annotate your Kubernetes services
 * [Prometheus](https://prometheus.io) metrics right out of the box
@@ -11,9 +11,9 @@ Cloud native API Gateway for Docker and Kubernetes.
 
 There are many ways to run Threshold. See instructions for:
 
-* [Kubernetes](install/kubernetes.md)
-* [Docker Compose](install/docker-compose.md)
-* [Docker](install/docker.md)
+* [Kubernetes](docs/install/kubernetes.md)
+* [Docker Compose](docs/install/docker-compose.md)
+* [Docker](docs/install/docker.md)
 
 The following instructions are for running a standalone Docker container. 
 
@@ -21,7 +21,7 @@ The following instructions are for running a standalone Docker container.
 
 We'll start our API Gateway with a single API, named `example`, and some test policies:
 
-    docker run -it -p 8080:8080 -v $PWD/examples/src/simple:/opt/threshold/apis gatehill/threshold-gateway
+    docker run -it -p 8080:8080 -v $PWD/examples/src/simple:/opt/kamara/apis threshold/gateway
 
 You now have an API Gateway running at [http://localhost:8080](http://localhost:8080), complete with a sample caching policy. 
 
@@ -37,7 +37,7 @@ The first time you run this, you will receive an HTTP response from the backend 
 
 ## Installation
 
-For more detailed documentation, see the [install](install) directory.
+For more detailed documentation, see the [install](docs/install) directory.
 
 ---
 
@@ -51,7 +51,7 @@ The Docker image includes the apiman Tomcat standalone distribution, custom plug
 
 ### Roadmap
 
-Plans for future features can be found in the [Roadmap](roadmap.md).
+Plans for future features can be found in the [Roadmap](docs/roadmap.md).
 
 ### Thanks
 
