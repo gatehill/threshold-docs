@@ -6,6 +6,8 @@ Start Threshold using `docker-compose`:
     cd artifacts/docker-compose
 	docker-compose up
 
+> Get the files for this example [on GitHub](https://github.com/gatehill/threshold-docs/tree/master/artifacts/docker-compose).
+
 ## Example
 
 ```
