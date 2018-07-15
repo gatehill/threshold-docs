@@ -81,4 +81,4 @@ This requires you to start the Kubernetes Controller, `threshold-controller`, an
 ## Next steps
 
 * Continue to the [Kubernetes tutorial](../kubernetes/tutorial.md)
-* Learn about the [annotations](../kubernetes/annotations.md) recognised by the Controller
+* Learn about the [annotations](../kubernetes/configuration.md) recognised by the Controller
