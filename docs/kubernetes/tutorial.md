@@ -79,7 +79,7 @@ It would be accessible at:
 
 You'll note that, by default:
 
-* the name of the service - in this case, 'example' forms part of the URL
+* the name of the service - in this case, 'example' - forms part of the URL
 * the API is placed into the default API Group, named 'apis'
 * the API is assigned an initial version of 1.0
 
@@ -87,5 +87,5 @@ You can change these elements using annotations.
 
 ## What's next?
 
-* Learn about all the [annotations](./configuration.md) you can add to your Kubernetes Service.
-* Learn about all the [policies](../policies.md) you can apply to control behaviour.
+* Learn about the [annotations](./configuration.md) you can add to your Kubernetes Services.
+* Learn about all the [policies](../policies.md) you can apply to your APIs to control their behaviour.
