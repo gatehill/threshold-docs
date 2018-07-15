@@ -58,54 +58,6 @@ This requires you to start the Kubernetes Controller, `threshold-controller`, an
 
 > Get the files for this example [on GitHub](https://github.com/gatehill/threshold-docs/tree/master/artifacts/kubernetes).
 
-## Annotations
+## Next steps
 
-Add these annotations to your Service:
-
-| Annotation                        | Meaning                                      | Type               | Example                   |
-|-----------------------------------|----------------------------------------------|--------------------|---------------------------|
-| threshold.gatehill.io/name           | API name (default: service name)             | string (optional)  | example                   |
-| threshold.gatehill.io/version        | API version                                  | string (required)  | "1.0"                     |
-| threshold.gatehill.io/policies       | Policies to apply                            | string (required)  | cache duration 60.seconds | 
-| threshold.gatehill.io/service-port   | Service port to expose (default: first port) | string (optional)  | "80"                        | 
-| threshold.gatehill.io/backend-prefix | Prefix to prepend to backend path            | string (optional)  | /my/api                   | 
-
-> Note: the policies annotation can be a multiline string, e.g.
-
-```
-threshold.gatehill.io/policies: |
-  cache duration 60.seconds
-  limit to 10 per minute
-```
-
-## Example
-
-An example Service with annotations.
-
-```
-apiVersion: v1
-kind: Service
-metadata:
-  name: example
-  labels:
-    app: example
-  annotations:
-    threshold.gatehill.io/version: "1.0"
-    threshold.gatehill.io/policies: |
-      cache duration 60.seconds
-      limit to 10 per minute
-spec:
-  type: ClusterIP
-  selector:
-    app: example
-  ports:
-  - name: "http"
-    port: 80
-    targetPort: 8080
-```
-
-## What does this do?
-
-The configuration above exposes an API for the 'example' service, with two policies. It would be accessible at:
-
-    http://<threshold gateway>/apis/example/1.0
+Continue to [Kubernetes tutorial](../kubernetes/tutorial.md).
