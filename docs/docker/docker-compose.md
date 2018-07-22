@@ -40,6 +40,5 @@ The first time you run this, you will receive an HTTP response from the backend 
 
 ## What's next?
 
-* Learn about the [annotations](./configuration.md) you can add to your Kubernetes Services.
 * Learn about all the [policies](../policies.md) you can apply to your APIs to control their behaviour.
-* See [tips and tricks](../tips.md)help you get the most out of your Threshold installation.
+* See [tips and tricks](../tips.md) to help you get the most out of your Threshold installation.
