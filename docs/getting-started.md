@@ -3,7 +3,7 @@ Getting started
 
 There are lots of ways to run Threshold. See instructions for:
 
-* [Kubernetes](kubernetes/install.md)
+* [Kubernetes](kubernetes/tutorial.md)
 * [Docker Compose](docker/docker-compose.md)
 * [Docker](docker/docker.md)
 
@@ -13,7 +13,7 @@ We're going to run Threshold as a standalone Docker container. This will allow u
 
 > Explore the example policies [on GitHub](https://github.com/gatehill/threshold-docs/tree/master/examples/src).
 
-## Policies
+## Step 1: Policies
 
 First, we need some policies.
 
@@ -22,9 +22,11 @@ Let's clone this repository and set the working directory:
     git clone https://github.com/gatehill/threshold-docs.git
     cd threshold-docs
 
-> You can explore the example policies under the `exaples/src` directory.
+> You can explore the example policies under the `examples/src` directory.
 
 For this example, we're going to pick the `simple` policy.
+
+### Step 2: Running
 
 Let's start the gateway, pointing to the `examples/src/simple` directory.
 
@@ -32,7 +34,7 @@ Let's start the gateway, pointing to the `examples/src/simple` directory.
 
 In the logs, you'll see the gateway start, read the policy and get ready to serve traffic.
 
-### Test it
+### Step 3: Testing
 
 We now have an API Gateway running at [http://localhost:8080](http://localhost:8080), complete with a sample caching policy. 
 

@@ -9,7 +9,7 @@ You can enable verbose parsing for API configuration with:
 
     CLI_DEBUG="enabled"
 
-### Example
+Example:
 
     docker run -e CLI_DEBUG="enabled" -it -p 8080:8080 -v $PWD/examples/src/simple:/opt/kamara/apis threshold/gateway
 
@@ -19,7 +19,7 @@ You can enable development SSL mode (which is unsafe for production-like workloa
 
     DEV_SSL="enabled"
 
-### Example
+Example:
 
     docker run -e DEV_SSL="enabled" -it -p 8080:8080 -v $PWD/examples/src/simple:/opt/kamara/apis threshold/gateway
 
