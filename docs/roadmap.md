@@ -4,7 +4,7 @@ Roadmap
 ## Installation
 - ~~Add Kubernetes Deployment and Service objects~~
 - ~~Add Docker Compose file~~
-- Add Terraform and ECS configuration
+- Add Terraform ECS configuration
 
 ## Docs
 - Add Kubernetes tutorial

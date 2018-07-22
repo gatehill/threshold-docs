@@ -3,15 +3,15 @@ Policies
 
 You configure Threshold APIs by applying _policies_. These are rules or behaviours that apply to the requests or responses sent to your APIs.
 
-The supported policies are:
+The supported policies include:
 
-* [Caching](#caching)
-* [Rate limiting](#rate-limiting)
-* [Authentication](#authentication)
-* [IP restrictions](#ip-restrictions)
-* [Invoke AWS Lambda function](#invoke-aws-lambda-function)
+* Caching
+* Rate limiting
+* Authentication
+* IP restrictions
+* Invoke AWS Lambda functions
 
-# Policies
+# Supported policies
 
 This section describes the supported policies. See the [Configuration](configuration.md) section for details about where to configure policies.
 

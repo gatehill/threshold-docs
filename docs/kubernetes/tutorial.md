@@ -1,6 +1,9 @@
+Kubernetes Tutorial
+===================
+
 ## Prerequisites
 
-Ensure you have followed the [Kubernetes installation](../install/kubernetes.md) instructions.
+Ensure you have followed the [Kubernetes installation](install.md) instructions.
 
 You will need to have installed _Threshold Controller_ as well as the _Gateway_ element.
 
@@ -89,3 +92,4 @@ You can change these elements using annotations.
 
 * Learn about the [annotations](./configuration.md) you can add to your Kubernetes Services.
 * Learn about all the [policies](../policies.md) you can apply to your APIs to control their behaviour.
+* See [tips and tricks](../tips.md)help you get the most out of your Threshold installation.
