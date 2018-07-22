@@ -52,4 +52,4 @@ The first time we run this, we will receive an HTTP response from the backend - 
 
 * Install Threshold [on a Kubernetes cluster](./kubernetes/install.md)
 * Learn about all the [policies](./policies.md) you can apply to your APIs to control their behaviour.
-* See [tips and tricks](./tips.md)help you get the most out of your Threshold installation.
+* See [tips and tricks](./tips.md) to help you get the most out of your Threshold installation.
