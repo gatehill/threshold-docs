@@ -9,11 +9,13 @@ There are lots of ways to run Threshold. See instructions for:
 
 ---
 
+## Simple local example
+
 We're going to run Threshold as a standalone Docker container. This will allow us to get familiar with the Gateway and explore some simple policies.
 
 > Explore the example policies [on GitHub](https://github.com/gatehill/threshold-docs/tree/master/examples/src).
 
-## Step 1: Policies
+#### Step 1: Policies
 
 First, we need some policies.
 
@@ -26,7 +28,7 @@ Let's clone this repository and set the working directory:
 
 For this example, we're going to pick the `simple` policy.
 
-### Step 2: Running
+#### Step 2: Running
 
 Let's start the gateway, pointing to the `examples/src/simple` directory.
 
@@ -34,7 +36,7 @@ Let's start the gateway, pointing to the `examples/src/simple` directory.
 
 In the logs, you'll see the gateway start, read the policy and get ready to serve traffic.
 
-### Step 3: Testing
+#### Step 3: Testing
 
 We now have an API Gateway running at [http://localhost:8080](http://localhost:8080), complete with a sample caching policy. 
 
