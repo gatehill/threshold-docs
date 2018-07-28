@@ -15,30 +15,36 @@ We're going to run Threshold as a standalone Docker container. This will allow u
 
 > Explore the example policies [on GitHub](https://github.com/gatehill/threshold-docs/tree/master/examples/src).
 
-#### Step 1: Policies
+#### Step 1: API and policies
 
-First, we need some policies.
-
-Let's clone this repository and set the working directory:
+First, we need an API and some policies. Let's clone the documentation Git repository and set the working directory:
 
     git clone https://github.com/gatehill/threshold-docs.git
     cd threshold-docs
 
 > You can explore the example policies under the `examples/src` directory.
 
-For this example, we're going to pick the `simple` policy.
+For this example, the file in the `simple` directory defines an API named `example`.
+
+This API uses as its backend the website example.com; the example we're using adds a simple policy to this API.
+
+This policy adds simple caching behaviour to HTTP responses, meaning that after the first successful response, a cached HTTP body will be returned for subsequent requests for 60 seconds.
 
 #### Step 2: Running
 
-Let's start the gateway, pointing to the `examples/src/simple` directory.
+Let's start the gateway, pointing to the `simple` policy in the `examples/src/simple` directory.
 
     docker run -it -p 8080:8080 -v $PWD/examples/src/simple:/opt/kamara/apis threshold/gateway
 
-In the logs, you'll see the gateway start, read the policy and get ready to serve traffic.
+Note that we're mapping the local policies directory to the `/opt/kamara/apis` location within the running container. This is the default location that Threshold looks for policy files.
+
+In the logs of the running container you'll see the gateway start, read the policy and get ready to serve traffic.
+
+Good job! We now have an API Gateway running at [http://localhost:8080](http://localhost:8080), complete with a sample caching policy.
 
 #### Step 3: Testing
 
-We now have an API Gateway running at [http://localhost:8080](http://localhost:8080), complete with a sample caching policy. 
+Now we're going to test our API, 
 
     curl -v http://localhost:8080/apis/example/1.0/
 
@@ -46,6 +52,6 @@ The first time we run this, we will receive an HTTP response from the backend - 
 
 ## What's next?
 
-* Learn about the [annotations](./configuration.md) you can add to your Kubernetes Services.
-* Learn about all the [policies](../policies.md) you can apply to your APIs to control their behaviour.
-* See [tips and tricks](../tips.md)help you get the most out of your Threshold installation.
+* Install Threshold [on a Kubernetes cluster](./kubernetes/install.md)
+* Learn about all the [policies](./policies.md) you can apply to your APIs to control their behaviour.
+* See [tips and tricks](./tips.md) to help you get the most out of your Threshold installation.

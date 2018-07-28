@@ -13,7 +13,7 @@ Example:
 
     docker run -e CLI_DEBUG="enabled" -it -p 8080:8080 -v $PWD/examples/src/simple:/opt/kamara/apis threshold/gateway
 
-## Development SSL mode
+## Development SSL mode
 
 You can enable development SSL mode (which is unsafe for production-like workloads!) using:
 
