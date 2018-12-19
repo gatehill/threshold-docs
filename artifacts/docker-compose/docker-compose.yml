@@ -10,5 +10,9 @@ services:
       # - "8443:8443"
     volumes:
       - type: bind
-        source: ../../examples/simple
+        source: ./example-apis
         target: /opt/kamara/apis
+  grafana:
+      image: grafana/grafana:4.6.5
+      ports:
+        - "3000:3000"
