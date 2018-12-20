@@ -1,13 +1,15 @@
 # Threshold API Gateway
 
-Cloud native API Gateway for Docker and Kubernetes.
+_API protection for Kubernetes services and Lambda functions._
+
+With Threshold you can:
 
 * Add caching, rate limiting, authentication, IP restrictions [and much more](docs/policies.md) in front of your APIs
-* Runs in Kubernetes, Docker Compose and plain Docker
+* Runs in [Kubernetes](docs/kubernetes/tutorial.md), [Docker Compose](docs/docker/docker-compose.md) and plain [Docker](docs/docker/docker.md)
 * Add policies to your APIs in seconds with the simple DSL, or annotate your Kubernetes services
 * [Prometheus](https://prometheus.io) metrics right out of the box
 
-Visit the [Threshold website](https://www.threshold.cloud) for more information.
+> Visit the [Threshold website](https://www.threshold.cloud) for more information.
 
 ## Getting started
 
@@ -20,10 +22,6 @@ There are lots of ways to run Threshold. See instructions for:
 If you just want to try out Threshold, see [these instructions](docs/getting-started.md) for running a standalone Docker container. 
 
 ---
-
-## Installation
-
-For more detailed documentation, see the [install](docs/install) directory.
 
 ## About
 

@@ -11,7 +11,7 @@ There are lots of ways to run Threshold. See instructions for:
 
 ## Simple local example
 
-We're going to run Threshold as a standalone Docker container. This will allow us to get familiar with the Gateway and explore some simple policies.
+In this guide, we will assume you just want to kick the tires, so we're going to run Threshold as a standalone Docker container. This will allow you to get familiar with the Gateway and explore some simple policies.
 
 > Explore the example policies [on GitHub](https://github.com/gatehill/threshold-docs/tree/master/examples/src).
 

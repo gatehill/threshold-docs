@@ -11,6 +11,10 @@ Installation consists of 3 steps:
 
 Once you've completed these steps, Threshold is configured to use your license key.
 
+## Prerequisites
+
+Follow the [installation](install.md) instructions first.
+
 ## Step 1: Save license key
 
 At the end of the purchase process your license key is generated:
