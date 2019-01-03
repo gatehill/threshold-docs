@@ -19,7 +19,7 @@ Follow the [installation](install.md) instructions first.
 
 At the end of the purchase process your license key is generated:
 
-![Purchase complete](https://raw.githubusercontent.com/gatehill/threshold-docs/master/docs/img/purchase_complete.png)
+![Purchase complete](https://raw.githubusercontent.com/thresholdcloud/documentation/master/docs/img/purchase_complete.png)
 
 You should save this license key to a plain text file. We will use this in step 2.
 

@@ -24,7 +24,7 @@ Install the Gateway with `kubectl`:
     cd artifacts/kubernetes
     kubectl apply -f gateway.yml
 
-> Get the files for this example [on GitHub](https://github.com/gatehill/threshold-docs/tree/master/artifacts/kubernetes).
+> Get the files for this example [on GitHub](https://github.com/thresholdcloud/documentation/tree/master/artifacts/kubernetes).
 
 ## Example
 
@@ -76,7 +76,7 @@ This requires you to start the Kubernetes Controller, `threshold-controller`, an
     cd artifacts/kubernetes
     kubectl apply -f controller.yml
 
-> Get the files for this example [on GitHub](https://github.com/gatehill/threshold-docs/tree/master/artifacts/kubernetes).
+> Get the files for this example [on GitHub](https://github.com/thresholdcloud/documentation/tree/master/artifacts/kubernetes).
 
 ## Next steps
 

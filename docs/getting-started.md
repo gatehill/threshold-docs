@@ -13,13 +13,13 @@ There are lots of ways to run Threshold. See instructions for:
 
 In this guide, we will assume you just want to kick the tires, so we're going to run Threshold as a standalone Docker container. This will allow you to get familiar with the Gateway and explore some simple policies.
 
-> Explore the example policies [on GitHub](https://github.com/gatehill/threshold-docs/tree/master/examples/src).
+> Explore the example policies [on GitHub](https://github.com/thresholdcloud/documentation/tree/master/examples/src).
 
 #### Step 1: API and policies
 
 First, we need an API and some policies. Let's clone the documentation Git repository and set the working directory:
 
-    git clone https://github.com/gatehill/threshold-docs.git
+    git clone https://github.com/thresholdcloud/documentation.git
     cd threshold-docs
 
 > You can explore the example policies under the `examples/src` directory.
